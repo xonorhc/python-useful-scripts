@@ -1,22 +1,43 @@
-# PyMySQL
+# MySQL
 
-Cliente MySQL feito em Python Puro
+Este diretório contém scripts para trabalhar com bancos de dados MySQL.
 
-[Doc](https://pymysql.readthedocs.io/en/latest/)
-[Pypy](https://pypi.org/project/pymysql/)
-[GitHub](https://github.com/PyMySQL/PyMySQL)
+## O que faz
 
-Intall: `pip install PyMySQL types-pymysql`
+- Conectar a um servidor MySQL
+- Executar queries de leitura e escrita
+- Criar / modificar tabelas ou bancos
+- Outras operações utilitárias envolvendo MySQL (backup, etc.), conforme os scripts existentes
 
-## MySQL with Docker
+## Requisitos
 
-Iniciar o mysql: `docker-compose up -d`
+- Python 3.x
+- Biblioteca para MySQL (por exemplo `mysql-connector-python` ou `pymysql`)
+- Acesso a um servidor/banco MySQL, com credenciais válidas
 
-> [!NOTE]
-> Verificar o nome do container `docker ps -a`
-> Iniciar o container `docker start <container-name>`
-> Parar o container `docker stop <container-name>`
+## Como usar
 
-Acessar usando CLI: `docker exec -it mysql-db-1 mysql --user=myuser --password=password mydb`
+1. Navegue até este diretório:
 
-Acessar usando LazySQL: `lazysql mysql://myuser:password@localhost/mydb`
+   `cd mysql`
+
+2. Instale a(s) dependência(s):
+
+   ```bash
+   pip install mysql-connector-python
+   # ou
+   pip install pymysql
+   ```
+
+3. Edite os scripts para configurar host, usuário, senha, nome do banco, porta, etc.
+
+4. Rode o script desejado:
+
+   `python meu_script_mysql.py`
+
+5. Verifique os resultados/saídas conforme esperado.
+
+Exemplos:
+
+- connect.py — script que demonstra como conectar e executar uma query simples
+- backup.py — script para fazer backup de tabelas ou bancos

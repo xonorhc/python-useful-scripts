@@ -1,5 +1,3 @@
-# Selenium - Automatizando tarefas no navegador
-
 import shutil
 import tempfile
 from time import sleep
