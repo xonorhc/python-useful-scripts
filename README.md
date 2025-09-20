@@ -1,2 +1,3 @@
-# python-useful-scripts
+# Python useful script
+
 Python useful script repository
