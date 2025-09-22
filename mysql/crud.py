@@ -105,7 +105,7 @@ with connection:
             print(row)
 
         print("\nFor 2:\n")
-        cursor.scroll(0, "absolute")
+        cursor.scroll(2, "absolute")
         for row in cursor.fetchall():
             print(row)
         connection.commit()
